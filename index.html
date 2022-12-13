@@ -10,7 +10,18 @@
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
           integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/bootstrap-submenu.css">
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+    <script src="./js/bootstap-submenu.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>
@@ -35,42 +46,88 @@
 </head>
 <body>
 
-<!--header-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+<nav class="navbar navbar-light bg-light navbar-expand-sm mb-3 navbar-dark bg-dark">
     <a class="navbar-brand mb-0 h1" href="">Zengxiang Li (李增祥)</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
-            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarColor01">
+    <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item dropdown" style="cursor: pointer">
+                <a class="nav-link dropdown-toggle" tabindex="0" data-toggle="dropdown" data-submenu>
+                    ENN Group
+                </a>
+
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#enn_research">Research and Projects</a>
+                    <a class="dropdown-item" href="#enn_journals">Journals</a>
+                    <a class="dropdown-item" href="#enn_conferences">Conferences</a>
+                </div>
+
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#research">Research</a>
+            <li class="nav-item dropdown" style="cursor: pointer">
+                <a class="nav-link dropdown-toggle" tabindex="0" data-toggle="dropdown" data-submenu>
+                    A*STAR
+                </a>
+
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#enn_research">Research and Projects</a>
+                    <div class="dropdown dropright dropdown-submenu">
+                        <button class="dropdown-item dropdown-toggle" href="#a_journals" data-toggle="dropdown">Journals
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item">AI</a>
+                            <a class="dropdown-item">Others</a>
+                        </div>
+                    </div>
+                    <div class="dropdown dropright dropdown-submenu">
+                        <button class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#a_conferences">
+                            Conferences
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item">AI</a>
+                            <a class="dropdown-item">Others</a>
+                        </div>
+                    </div>
+                </div>
+
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#conferences">Conferences</a>
+            <li class="nav-item dropdown" style="cursor: pointer">
+                <a class="nav-link dropdown-toggle" tabindex="0" data-toggle="dropdown" data-submenu>
+                    Ph.D and Research Associate
+                </a>
+
+                <div class="dropdown-menu">
+                    <button class="dropdown-item" type="button">Journals</button>
+                    <button class="dropdown-item" type="button">Conferences</button>
+                </div>
+
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#journals">Journals</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#books">Books</a>
-            </li>
-            <li class="nav-item">
+            <li>
                 <a class="nav-link" href="#awards">Awards</a>
             </li>
-            <li class="nav-item">
+            <li>
                 <a class="nav-link" href="#activities">Activities</a>
             </li>
+
         </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" tabindex="0" data-toggle="dropdown" data-submenu>
+                    Language
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" >English</a>
+                    <a class="dropdown-item" href="test.html">Chinese</a>
+                </div>
+            </li>
+        </ul>
+
     </div>
 </nav>
-
-
 <div class="panel-group" id="accordion">
     <div class="panel panel-default">
         <!--person-->
@@ -175,49 +232,65 @@
                     <div class="col-md-1">
                     </div>
                     <div class="col-md-10">
-                        <div id="research">
+                        <div id="enn_research">
                             <hr size="50" color="#cfd8dc">
-                            <a id="search"><h2>Selected Research</h2></a>
+                            <a id="search"><h2> Digital Research Institute ENN Group
+                            </h2></a>
                             <h4 style="color: #2b00aa">
-                                Digital Research Institute ENN Group
+                                Research and Project
                             </h4>
+                            <p>
+                                Xin'ao Xinzhi Digital Technology Research Institute is committed to the research
+                                of industrial Internet data intelligence and the transformation of enterprises into
+                                digital intelligence. In recent years, the Institute has focused on industry AI and
+                                collaborative learning core technologies, with fruitful R&D results.We have applied for
+                                more than 400 invention patents, published more than 10 high-quality papers and won
+                                awards in international conferences, and participated in the development of many
+                                technical standards.
+                            </p>
                             <p>Leading a team of 50 researchers and engineers. Focusing on Industrial IoT, Artificial
                                 Intelligence and Federate Learning research and development for smart energy and smart
                                 city application domains. Establishing collaborations among government agencies,
                                 companies and universities for Federated Learning platform development and
                                 interoperability, industry application deployment and use case demonstration, as well as
                                 technology standard releases. </p>
-                            <p>The <strong style="color: red">Collaborative Learning </strong> technology developed by
-                                ENNEW
-                                (Xin‘ao Xinzhi) Digital Research
-                                Institute enables a number of enterprises to create AI models in a collaborative
-                                approach for industrial internet applications. Consequently, they could discover the
-                                insights behind data across silos and devices without compromising data sovereignty and
-                                privacy. Incentive mechanisms are designed to encourage participants contributing
-                                high-quality data to promote AI models and establish a sustainable industrial
-                                intelligent ecosystem together.</p>
-
 
                             <div class="shadow-lg p-3 mb-2 bg-white rounded">
                                 <b>
-                                    🔥🔥Federated Transfer Learning for Industry IoT<br>
+                                    🔥🔥Industry Artificial Intelligence<br>
                                 </b>
-                                * System and statistical heterogeneity challenges in federated learning for IoT
-                                applications<br>
-                                * Accurate and cost-saving gas boiler soft sensing across multiple stations<br>
-                                * Knowledge-based ML and FL for equipment predictive maintenance<br>
-                                * Heterogeneous model fusion mechanisms with Cloud-edge computing coordination
-
+                                Starting from the intelligent needs of the core
+                                business scenarios of ENN Group, we research multimodal data intelligence algorithms,
+                                including prediction algorithms based on time-series data, anomaly detection and fault
+                                diagnosis algorithms based on IOT data, computer vision algorithms based on image, video
+                                and special equipment imaging, cognitive intelligence algorithms based on Bayesian
+                                networks and knowledge graphs, and decision optimization algorithms based on operations
+                                research, bionics and reinforcement learning. At the same time, I am committed to
+                                research on cutting-edge AI technologies, including pre-training, migration learning and
+                                adaptive learning of industrial basic models, self-supervised learning, model
+                                compression and edge cloud collaborative deployment, as well as model interpretability
+                                and trusted AI.
 
                             </div>
                             <div class="shadow-lg p-3 mb-2 bg-white rounded">
                                 <b>
                                     🔥🔥Personalized Federated Learning for Gas and Electricity Demand Prediction<br>
                                 </b>
-                                * Privacy-preserving clustering for personalized and efficient prediction models<br>
-                                * Self-supervised learning and transfer learning for large-scale energy load forecasting
-                                <br>
-                                * Probability prediction based risk assessment for decision making<br>
+                                Joint learning technology: under the premise of protecting data sovereignty and privacy
+                                security, jointly mining the value behind the data and jointly building industrial
+                                intelligence ecology. Support a variety of machine learning and deep learning joint
+                                learning algorithms and adaptive model aggregation strategies. Using advanced AI
+                                technologies such as knowledge distillation, migration learning, self-supervised
+                                learning, difficult sample selection, and similar data clustering to reduce joint
+                                learning communication overhead, improve edge-cloud collaboration efficiency, and
+                                support ecological partners to use heterogeneous data, systems, and models to
+                                efficiently co-create high-quality AI models. Privacy protection technologies such as
+                                secure multi-party computing, homomorphic encryption, trusted execution environment and
+                                differential privacy are used to guarantee the security level while reducing the
+                                computation and communication overhead. Measure the contribution of participants to the
+                                intelligent model through allocation incentive mechanism, encourage contribution of
+                                high-value data, and stimulate mutual trust and cooperation, fair competition and
+                                sustainable development of the industrial ecology.
 
 
                             </div>
@@ -242,74 +315,538 @@
                                 community, energy saving and novel business model<br>
 
                             </div>
-                            <h4 style="color: #841dd9">
-                                Institute of High Performance Computing A*STAR
-                            </h4>
-                            <p>Led a team of 15 researchers and engineers, and supervised several Ph.D and internship
-                                students. Played the role as PI and Co-PI for several impactful research programmes and
-                                industry projects, establishing close relations with universities, government agencies
-                                and
-                                industrial companies, to work together as an avid collaborator on research problems and
-                                solutions towards improving society. Research interests include distributed system, data
-                                center, big data analytics and urban computing, blockchain, multi-party computation and
-                                federated learning. Published dozens of high-quality papers on ACM/IEEE Transactions,
-                                Journals, and Conferences, and also serves as track/workshop chair of several reputable
-                                international conferences.</p>
-                            <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                <b>Industry project “Transparent HPC”, Role: Key Member (Mar-2020 to Feb-2022)</b><br>
-                                Machine learning for adaptive resource provisioning for HPC applications
-                            </div>
 
-                            <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                <b>Industry project “Scalable Analytics Platform (ModStore) for National Precision
-                                    Medicine
-                                    Research”, Role: PI (Oct-2019 to Oct-2021)</b><br>
-                                Workflow pipelines for genomic and clinical data analytics on scalable platform
-                            </div>
-                            <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                <b>
-                                    Singapore-Germany Academic-Industry (2+2) International Collaboration Grant
-                                    “SuppliedTrust: A Blockchain-based governance framework for transparent, efficient
-                                    and
-                                    trusted supply chain of unregulated consumer products”, Role: PI (Jan-2020 to
-                                    Dec-2022) </b><br>
-                                A distributed, Blockchain-based, end-to-end trust anchor for the governance, auditing
-                                and data insights of the supply chain of currently unregulated consumer products.
-                            </div>
-                            <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                <b> A*STAR SERC Strategic Fund: “Trusted Data Vault Phase 1” Partners: I2R, ACRC, BMRC,
-                                    Role: Co-PI (Jan-2020 to Dec-2020)</b><br>
-                                Enable secure data sharing and privacy-preserving collaborative learning across
-                                organizations using blockchain, multiparty computation and federated learning.<br>
-                                Secure data storage service or maritime shipping companies using multiparty computation
-                                (MPC) technology
-                            </div>
-                            <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                <b>A*STAR IAF-PP Programme “Industrial Internet-of-Things Innovation (I3) Platform”
-                                    “Secure Platform for Trusted Collaborations” work package, Role: Co-PI (Oct-2018 to
-                                    Oct-2021)</b><br>
-                                Investigate IIoT platform interoperability and apply immutable distributed ledger for
-                                product life-cycle tracking across multiple organizations
-                            </div>
-                            <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                <b>Smart Manufacturing Joint Lab: “Knowledge-based Manufacturing (KBM) Industrial
-                                    Internet
-                                    of Things (IIOT) Shared Services”, Role: Co-PI (Feb-2018 to Dec-2020)</b><br>
-                                Develop Cloud and on-premise industrial IOT solutions and implement microservices and
-                                manufacturing Apps based on machine learning predictive models
+                            <div id="enn_journals">
+                                <hr size="30" color="#cfd8dc">
+                                <h4 style="color: #2b00aa">Selected Journal Publications</h4>
+                                <a target="_blank"
+                                   href="https://scholar.google.com.hk/citations?hl=en&user=2Bh_o20AAAAJ">
+                                    Google Scholar</a> |
+                                <a target="_blank" href="https://dblp.org/pid/95/6812.html"> dblp </a> (* = equal
+                                contributions)
 
-                            </div>
-                            <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                <b> Urban Computing and Engineering Centre of Excellence in Singapore (CoE): “The
-                                    Large-scale Data Processing Research (LDP) Research”, Role: PI (Jun-2015 to
-                                    May-2018) </b><br>
-                                Develop high-speed and scalable distributed data analytics platform and investigate
-                                graph
-                                analytics to explore relationship insights for city/transportation planning.<br>
-                                Enable city-scale spatiotemporal data analytics for policy making, e.g., impact of ride
-                                sharing/hailing on-line services, transportation demand prediction and service
-                                evaluation.
 
+                                <div id="journal-example">
+                                    <!--[Pervasive Computing'21] A Case for Camera-as-a-Service-->
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <h6><strong style="color: red"> [TBD] </strong>
+                                            <a target="_blank"
+                                               href="https://federated-learning.org/fl-aaai-2022/Papers/FL-AAAI-22_paper_11.pdf">
+                                                WTDP-Shapley: Efficient and
+                                                Effective Incentive
+                                                Mechanism in Federated Learning for Intelligent Safety Inspection </a>
+                                        </h6>
+                                        Chengyi Yang, Jia Liu, Hao Sun,
+                                        Tongzhi Li and <b>Zengxiang Li </b> <br>
+                                        <i>IEEE Transactions on Big Data, IF 4.271, 2022 </i> <strong
+                                            style="color: #23afce">Accepted </strong><br>
+                                        <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
+                                <a style="color: white" target="_blank"
+                                   href="https://federated-learning.org/fl-aaai-2022/Papers/FL-AAAI-22_paper_11.pdf">[pdf]</a></span>
+
+                                    </div>
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <h6><strong style="color: red"> [TBD] </strong>
+                                            <a target="_blank"
+                                               href="https://ieeexplore.ieee.org/abstract/document/9900067/">
+                                                Augmented Multi-Party
+                                                Computation for Secure Federated Learning </a>
+                                        </h6>
+                                        Chi Zhang, Sotthiwat Ekant, Liangli Zhen,<b>Zengxiang Li </b> <br>
+                                        <i>IEEE Transactions on Big Data,IF
+                                            4.271, 2022</i> <strong
+                                            style="color: #23afce">Accepted </strong><br>
+                                        <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
+                                <a style="color: white" target="_blank"
+                                   href="https://ieeexplore.ieee.org/abstract/document/9900067/">[pdf]</a></span>
+
+                                    </div>
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <h6><strong style="color: red"> [ARRAY] </strong>
+                                            <a target="_blank"
+                                               href="https://www.sciencedirect.com/science/article/pii/S2590005622000546">
+                                                CE-Fed:
+                                                Communication Efficient Multi-party Computation Enabled Federated
+                                                Learning </a>
+                                        </h6>
+                                        Renuga Kanagavelu,Qingsong Wei, <b>Zengxiang Li </b>,Haibin Zhang,Juniarto
+                                        Samsudin,Yechao Yang,Rick Siow Mong Goh,Shangguang Wang<br>
+                                        <i>ARRAY 2020 Open Access </i> <br>
+                                        <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
+                                <a style="color: white" target="_blank"
+                                   href="https://www.sciencedirect.com/science/article/pii/S2590005622000546">[pdf]</a></span>
+
+                                    </div>
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <h6><strong style="color: red"> [TII] </strong>
+                                            <a target="_blank"
+                                               href="https://ieeexplore.ieee.org/abstract/document/9950718/">
+                                                R2Fed: Resilient Reinforcement
+                                                Federated Learning for Industrial Applications </a>
+                                        </h6>
+                                        Weishan Zhang,Fa Yu, Xiao Wang,Xingjie Zeng, Hongwei Zhao, Zenglin Tian,
+                                        Fei-Yue Wang, Hongwei Qi, <b>Zengxiang Li </b> <br>
+                                        <i> IEEE Transactions on Industrial
+                                            Informatics, IF 10.215, 2022 </i><strong
+                                            style="color: #23afce">Accepted </strong> <br>
+                                        <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
+                                <a style="color: white" target="_blank"
+                                   href="https://ieeexplore.ieee.org/abstract/document/9950718/">[pdf]</a></span>
+
+                                    </div>
+                                </div>
+                                <hr size="30" color="#cfd8dc">
+
+
+                                <h4 id="enn_conferences" style="color: #2b00aa">Selected Conference Publications</h4>
+
+                                <!--example-->
+                                <div id="conference-example">
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <h6><strong style="color: red"> [FL-AAAI ] </strong>
+                                            <a target="_blank"
+                                               href="https://federated-learning.org/fl-aaai-2022/Papers/FL-AAAI-22_paper_11.pdf">WT-Shapley:
+                                                Efficient and Effective Incentive Mechanism in Federated Learning for
+                                                Intelligent Safety Inspection</a>
+                                        </h6>
+                                        Chengyi Yang, Jia Liu, Hao Sun, Tongzhi Li and <b>Zengxiang Li</b> <br>
+                                        <i>International Workshop on Trustable, Verifiable and Auditable Federated
+                                            Learning
+                                            in
+                                            Conjunction with AAAI 2022 </i> <strong style="color: red"> Best Application
+                                        Award </strong> <br>
+                                        <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
+                                <a style="color: white" target="_blank"
+                                   href="https://federated-learning.org/fl-aaai-2022/Papers/FL-AAAI-22_paper_11.pdf">[pdf]</a></span>
+
+                                    </div>
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <h6><strong style="color: red"> [FL-AAAI ] </strong>
+                                            <a target="_blank"
+                                               href="https://federated-learning.org/fl-aaai-2022/Papers/FL-AAAI-22_paper_42.pdf">Personalized
+                                                Federated Learning for Multi-task Fault Diagnosis of Rotating
+                                                Machinery </a>
+                                        </h6>
+                                        Sheng Guo, <b>Zengxiang Li</b> Hui Liu, Shubao Zhao and Cheng Hao Jin <br>
+                                        <i> International Workshop on Trustable, Verifiable and Auditable Federated
+                                            Learning
+                                            in
+                                            Conjunction with AAAI 2022 </i><br>
+                                        <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
+                                <a style="color: white" target="_blank"
+                                   href="https://federated-learning.org/fl-aaai-2022/Papers/FL-AAAI-22_paper_42.pdf">[pdf]</a></span>
+
+                                    </div>
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <h6><strong style="color: red"> [FL-AAAI ] </strong>
+                                            <a target="_blank" href="https://arxiv.org/abs/2203.04305">LSTMSPLIT:
+                                                Effective
+                                                SPLIT
+                                                Learning based LSTM on Sequential Time-Series Data</a>
+                                        </h6>
+                                        Lianlian Jiang, YuexuanWang, Wenyi Zheng, Chao Jin, <b>Zengxiang Li</b>, Sin G.
+                                        Teo
+                                        <br>
+                                        <i>International Workshop on Trustable, Verifiable and Auditable Federated
+                                            Learning
+                                            in
+                                            Conjunction with AAAI 2022 </i><br>
+                                        <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
+                                <a style="color: white" target="_blank"
+                                   href="https://arxiv.org/abs/2203.04305">[arxiv]</a></span>
+
+                                    </div>
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <h6><strong style="color: red"> [FL-IJCAI ] </strong>
+                                            <a target="_blank"
+                                               href="https://federated-learning.org/fl-ijcai-2022/Papers/FL-IJCAI-22_paper_16.pdf">Cluster-driven
+                                                Personalized
+                                                Federated Learning for Natural Gas Load Forecasting</a>
+                                        </h6>
+                                        Shubao Zhao, Jia Liu, Guoliang Ma, Jie Yang, Di Liu and <b>Zengxiang Li</b> <br>
+                                        <i>FL-IJCAI 2022 : International Workshop on Trustworthy Federated Learning in
+                                            Conjunction with IJCAI 2022 (FL-IJCAI'22) </i> <strong style="color: red">
+                                        Innovation Award</strong> <br>
+                                        <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
+                                <a style="color: white" target="_blank"
+                                   href="https://federated-learning.org/fl-ijcai-2022/Papers/FL-IJCAI-22_paper_16.pdf">[pdf]</a></span>
+
+                                    </div>
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <h6><strong style="color: red"> [IAAI] </strong>
+                                            <a target="_blank">Efficient Training of Large-scale Industrial Fault
+                                                Diagnostic
+                                                Models through Federated Opportunistic Block Dropout</a>
+                                        </h6>
+                                        Yuanyuan Chen, Zichen Chen, Yansong Zhao, Zelei Liu, Pengcheng Wu, Sheng Guo,
+                                        Chengyi
+                                        Yang, <b>Zengxiang Li</b>and Han Yu <br>
+                                        <i>The 35th Annual Conference on Innovative Applications of Artificial
+                                            Intelligence
+                                            (IAAI-23) </i> <strong style="color: red"> AI deployment award</strong> <br>
+
+                                    </div>
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <h6><strong style="color: red"> [ICPADS ] </strong>
+                                            <a target="_blank">CluFL: Cluster-driven
+                                                Weighted FL Model Aggregation Strategy</a>
+                                        </h6>
+                                        Hanchi Shen, Jun Li, Kang Wei, Pengcheng Xia, Sirui Tian, Ming Ding, <b>Zengxiang
+                                        Li</b>
+                                        <br>
+                                        <i>The 28th IEEE International Conference on Parallel and Distributed Systems
+                                            (ICPADS
+                                            2022) </i> <strong style="color: #23afce"> Accepted</strong> <br>
+
+                                    </div>
+
+                                </div>
+
+                                <hr size="30" color="#cfd8dc">
+
+
+                                <div>
+                                    <h2>Institute of High Performance Computing A*STAR</h2>
+                                    <h4 style="color: #841dd9" id="a_research">
+                                        Research and Project
+                                    </h4>
+                                    <p>Led a team of 15 researchers and engineers, and supervised several Ph.D and
+                                        internship
+                                        students. Played the role as PI and Co-PI for several impactful research
+                                        programmes and
+                                        industry projects, establishing close relations with universities, government
+                                        agencies
+                                        and
+                                        industrial companies, to work together as an avid collaborator on research
+                                        problems and
+                                        solutions towards improving society. Research interests include distributed
+                                        system, data
+                                        center, big data analytics and urban computing, blockchain, multi-party
+                                        computation and
+                                        federated learning. Published dozens of high-quality papers on ACM/IEEE
+                                        Transactions,
+                                        Journals, and Conferences, and also serves as track/workshop chair of several
+                                        reputable
+                                        international conferences.</p>
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <b>Industry project “Transparent HPC”, Role: Key Member (Mar-2020 to
+                                            Feb-2022)</b><br>
+                                        Machine learning for adaptive resource provisioning for HPC applications
+                                    </div>
+
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <b>Industry project “Scalable Analytics Platform (ModStore) for National
+                                            Precision
+                                            Medicine
+                                            Research”, Role: PI (Oct-2019 to Oct-2021)</b><br>
+                                        Workflow pipelines for genomic and clinical data analytics on scalable platform
+                                    </div>
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <b>
+                                            Singapore-Germany Academic-Industry (2+2) International Collaboration Grant
+                                            “SuppliedTrust: A Blockchain-based governance framework for transparent,
+                                            efficient
+                                            and
+                                            trusted supply chain of unregulated consumer products”, Role: PI (Jan-2020
+                                            to
+                                            Dec-2022) </b><br>
+                                        A distributed, Blockchain-based, end-to-end trust anchor for the governance,
+                                        auditing
+                                        and data insights of the supply chain of currently unregulated consumer
+                                        products.
+                                    </div>
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <b> A*STAR SERC Strategic Fund: “Trusted Data Vault Phase 1” Partners: I2R,
+                                            ACRC, BMRC,
+                                            Role: Co-PI (Jan-2020 to Dec-2020)</b><br>
+                                        Enable secure data sharing and privacy-preserving collaborative learning across
+                                        organizations using blockchain, multiparty computation and federated
+                                        learning.<br>
+                                        Secure data storage service or maritime shipping companies using multiparty
+                                        computation
+                                        (MPC) technology
+                                    </div>
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <b>A*STAR IAF-PP Programme “Industrial Internet-of-Things Innovation (I3)
+                                            Platform”
+                                            “Secure Platform for Trusted Collaborations” work package, Role: Co-PI
+                                            (Oct-2018 to
+                                            Oct-2021)</b><br>
+                                        Investigate IIoT platform interoperability and apply immutable distributed
+                                        ledger for
+                                        product life-cycle tracking across multiple organizations
+                                    </div>
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <b>Smart Manufacturing Joint Lab: “Knowledge-based Manufacturing (KBM)
+                                            Industrial
+                                            Internet
+                                            of Things (IIOT) Shared Services”, Role: Co-PI (Feb-2018 to
+                                            Dec-2020)</b><br>
+                                        Develop Cloud and on-premise industrial IOT solutions and implement
+                                        microservices and
+                                        manufacturing Apps based on machine learning predictive models
+
+                                    </div>
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <b> Urban Computing and Engineering Centre of Excellence in Singapore (CoE):
+                                            “The
+                                            Large-scale Data Processing Research (LDP) Research”, Role: PI (Jun-2015 to
+                                            May-2018) </b><br>
+                                        Develop high-speed and scalable distributed data analytics platform and
+                                        investigate
+                                        graph
+                                        analytics to explore relationship insights for city/transportation planning.<br>
+                                        Enable city-scale spatiotemporal data analytics for policy making, e.g., impact
+                                        of ride
+                                        sharing/hailing on-line services, transportation demand prediction and service
+                                        evaluation.
+
+
+                                    </div>
+                                    <hr size="30" color="#cfd8dc">
+
+
+                                    <h4 style="color: #841dd9" id="a_journals">Selected Journal Publications</h4>
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <h6><strong style="color: red"> [LDH] </strong>
+                                            <a target="_blank"
+                                               href="">
+                                                Retinal Photograph-Based
+                                                Deep Learning Algorithms for Myopia and a Blockchain Platform to
+                                                Facilitate
+                                                Artificial Intelligence Medical Research: A Retrospective Multi-Cohort
+                                                Study
+                                            </a>
+                                        </h6>
+                                        Tien-En Tan, Ayesha Anees, Cheng Chen, Shaohua Li, Xinxing Xu, <b>Zengxiang
+                                        Li </b>,
+                                        Tien Yin Wong, Yong Liu, Daniel Shu Wei Ting, et, al <br>
+                                        <i> The Lancet Digital Health, Mar, 2021 </i> <strong style="color: #23afce">
+                                        Editor’s
+                                        Pick </strong><br>
+
+
+                                    </div>
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <h6><strong style="color: red"> [ACS] </strong>
+                                            <a target="_blank"
+                                               href="https://dl.acm.org/doi/abs/10.1145/3464421">
+                                                A Survey of
+                                                Smart Contract Formal Specification and Verification </a>
+                                        </h6>
+                                        Palina Tolmach, Yi Li, Shang-Wei Lin, Yang Liu, <b>Zengxiang Li </b> <br>
+                                        <i> ACM Computing
+                                            Surveys, Mar, 2021</i><strong
+                                            style="color: #23afce">Accepted </strong> <br>
+                                        <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
+                                <a style="color: white" target="_blank"
+                                   href="https://dl.acm.org/doi/abs/10.1145/3464421">[pdf]</a></span>
+
+                                    </div>
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <h6><strong style="color: red"> [TSC] </strong>
+                                            <a target="_blank"
+                                               href="">
+                                                Decentralized
+                                                Federated Learning with Two-Phase Multi-Party Computation </a>
+                                        </h6>
+                                        Kanagevelu, Renuga; Wei, Qingsong; <b>Zengxiang Li </b>; Haibin, Zhang;
+                                        Samsudin,
+                                        Juniarto; Yang, Yechao; Feng, Yang; Goh, Rick Siow Mong <br>
+                                        <i> Transactions on
+                                            Services Computing </i> <strong
+                                            style="color: #23afce">Under Review </strong><br>
+
+
+                                    </div>
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <h6><strong style="color: red"> [Knowledge-Based Systems] </strong>
+                                            <a target="_blank"
+                                               href="https://ieeexplore.ieee.org/abstract/document/9950718/">
+                                                Augmented Multi-Party Computation for Secure Federated Learning
+                                            </a>
+                                        </h6>
+                                        Chi Zhang Sotthiwat Ekanut; Liangli Zhen; Joey Tianyi Zhou; <b>Zengxiang Li </b><br>
+                                        <i> Knowledge-Based Systems </i> <strong
+                                            style="color: #23afce">Under Review </strong><br>
+
+                                    </div>
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <h6><strong style="color: red"> [Internet of Things] </strong>
+                                            <a target="_blank"
+                                               href="https://ieeexplore.ieee.org/abstract/document/9170559/">
+                                                Privacy-Preserving Blockchain-Based Federated
+                                                Learning for IoT Devices </a>
+                                        </h6>
+                                        Yang Zhao, Jun Zhao, Linshan Jiang, Rui Tan, Dusit Niyato, <b>Zengxiang Li </b>,
+                                        Lingjuan Lyu, and Yingbo Liu <br>
+                                        <i> IEEE Internet of Things Journal, 2020</i> <br>
+                                        <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
+                                <a style="color: white" target="_blank"
+                                   href="https://ieeexplore.ieee.org/abstract/document/9170559/">[pdf]</a></span>
+
+                                    </div>
+
+                                    <!--                            6-12-->
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <h6><strong style="color: red"> [TCSS] </strong>
+                                            <a target="_blank"
+                                               href=https://ieeexplore.ieee.org/abstract/document/9259116/">
+                                                Blockchain and IoT for Insurance: A Case Study and
+                                                Cyberinfrastructure Solution on Fine-grained Transportation Insurance
+                                            </a>
+                                        </h6>
+                                        Zhe Xiao, <b>Zengxiang Li </b>, Yechao Yang, Yauheni Pyrloh, Ekanut Sotthiwat
+                                        and
+                                        Rick Siow Mong Goh <br>
+                                        <i> Transactions on Computational Social System, 2020</i> <br>
+                                        <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
+                                <a style="color: white" target="_blank"
+                                   href="https://ieeexplore.ieee.org/abstract/document/9259116/">[pdf]</a></span>
+
+                                    </div>
+
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <h6><strong style="color: red"> [ITS] </strong>
+                                            <a target="_blank"
+                                               href="https://www.tandfonline.com/doi/abs/10.1080/15472450.2020.1852082">
+                                                Reinforcement Learning enabled Genetic Algorithm for Vehicle Fleet
+                                                Scheduling
+                                            </a>
+                                        </h6>
+                                        Eda Koksal Ahmed, <b>Zengxiang Li</b>, Bharadwaj Veeravalli and Shen Ren <br>
+                                        <i> Journal of Intelligent Transportation Systems, 2020</i> <strong
+                                            style="color: #23afce;">Accepted </strong><br>
+                                        <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
+                                <a style="color: white" target="_blank"
+                                   href="https://www.tandfonline.com/doi/abs/10.1080/15472450.2020.1852082">[pdf]</a></span>
+
+                                    </div>
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <h6><strong style="color: red"> [Transportation Science] </strong>
+                                            <a target="_blank"
+                                               href="https://pubsonline.informs.org/doi/abs/10.1287/trsc.2019.0915">
+                                                Phase Transition in Taxi Dynamics and Impact of
+                                                Ridesharing </a>
+                                        </h6>
+                                        Bo Yang, Shen Ren, Erika Legara, <b>Zengxiang Li</b>, Edward Ong, Louis Lin and
+                                        Christophe Monterola<br>
+                                        <i> Transportation Science, 2019 </i> <br>
+                                        <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
+                                <a style="color: white" target="_blank"
+                                   href="https://pubsonline.informs.org/doi/abs/10.1287/trsc.2019.0915">[pdf]</a></span>
+
+                                    </div>
+
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <h6><strong style="color: red"> [Transport Dynamics] </strong>
+                                            <a target="_blank"
+                                               href="https://www.tandfonline.com/doi/shareview/10.1080/21680566.2018.1449682">
+                                                Equality of Public Transit Connectivity: The
+                                                Influence of MRT Services on Individual Buildings for Singapore
+                                            </a>
+                                        </h6>
+                                        <b>Zengxiang Li</b>, Shen Ren, Nan Hu, Yong Liu, Zheng Qin, Rick Siow Mong Goh,
+                                        Liwen Hou, Bharadwaj Veeravalli <br>
+                                        <i> Transportmetrica B: Transport Dynamics, 2018 </i> <br>
+                                        <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
+                                <a style="color: white" target="_blank"
+                                   href="https://www.tandfonline.com/doi/shareview/10.1080/21680566.2018.1449682">[pdf]</a></span>
+
+                                    </div>
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <h6><strong style="color: red"> [TMCS] </strong>
+                                            <a target="_blank"
+                                               href="https://dl.acm.org/doi/abs/10.1145/3265749">
+                                                Efficient
+                                                Parallel Simulation over Large-scale Social Contact Networks</a>
+                                        </h6>
+                                        Yulin Wu, Wentong Cai, <b>Zengxiang Li</b>, Xiangting Hou, Wen Jun Tan <br>
+                                        <i> ACM Trans. on
+                                            Modeling and Computer Simulation, 2018</i> <br>
+                                        <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
+                                <a style="color: white" target="_blank"
+                                   href="https://dl.acm.org/doi/abs/10.1145/3265749">[pdf]</a></span>
+
+                                    </div>
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <h6><strong style="color: red"> [Springer-Verlag] </strong>
+                                            <a target="_blank"
+                                               href="https://link.springer.com/chapter/10.1007/978-3-030-67270-6_6">
+                                                Federated Learning for
+                                                Advanced Manufacturing Based on Industrial IoT Data Analytics </a>
+                                        </h6>
+                                        Renuga Kanagavelu, <b>Zengxiang Li</b>, Juniarto Samsudin, Shaista Hussain,
+                                        Yang
+                                        Yechao, Yang Feng, Goh Siow Mong, Rick, Mervyn Cheah<br>
+                                        <i> Book chapter of
+                                            “The Model Factory as the key enabler for the Future of Manufacturing”.
+                                            Part
+                                            of
+                                            Book Series “Intelligent Systems Reference Library”, Springer-Verlag,
+                                            2020</i>
+                                        <br>
+                                        <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
+                                <a style="color: white" target="_blank"
+                                   href="https://link.springer.com/chapter/10.1007/978-3-030-67270-6_6">[Book]</a></span>
+
+                                    </div>
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <h6><strong style="color: red"> [Elsevier] </strong>
+                                            <a target="_blank"
+                                               href="https://www.sciencedirect.com/science/article/pii/B9780128180143000085">
+                                                An Effective Blockchain-based Decentralized Application for Smart
+                                                Building System Management </a>
+                                        </h6>
+                                        Quanqing Xu, Zhaozheng He, <b>Zengxiang Li</b>, Mingzhong Xiao, Rick Siow
+                                        Mong
+                                        Goh,
+                                        Yongjun Li <br>
+                                        <i> Book chapter of “Real-Time Data Analytics for
+                                            Large-Scale Sensor Data", Elsevier 2019</i> <br>
+                                        <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
+                                <a style="color: white" target="_blank"
+                                   href="https://www.sciencedirect.com/science/article/pii/B9780128180143000085">[Book]</a></span>
+
+                                    </div>
+
+                                    <!--                                    2017年前Journal-->
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <h6><strong style="color: red"> [SMPT] </strong>
+                                            <a target="_blank"
+                                               href="https://www.sciencedirect.com/science/article/pii/S1569190X15001471">
+                                                Transparent three-phase Byzantine fault tolerance for parallel and
+                                                distributed simulations </a>
+                                        </h6>
+                                        <b>Zengxiang Li</b>, Wentong Cai, Stephen John Turner, Zheng Qin, Rick Siow Mong
+                                        Goh<br>
+                                        <i> Simulation Modelling Practice and Theory</i> <br>
+                                        <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
+                                <a style="color: white" target="_blank"
+                                   href="https://www.sciencedirect.com/science/article/pii/S1569190X15001471">[Book]</a></span>
+
+                                    </div>
+                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
+                                        <h6><strong style="color: red"> [TOMACS] </strong>
+                                            <a target="_blank"
+                                               href="https://ink.library.smu.edu.sg/cgi/viewcontent.cgi?article=5851&context=sis_research">
+                                                Adaptive Resource Provisioning Mechanism in VEEs for Improving
+                                                Performance
+                                                of HLA-Based Simulations
+                                            </a>
+                                        </h6>
+                                        <b>Zengxiang Li</b>, Wentong Cai, Stephen John Turner, Xiaorong Li, Ta Nguyen
+                                        Binh
+                                        Duong, Rick Siow Mong Goh
+                                        <br>
+                                        <i> ACM Transactions on Modeling and Computer Simulation (TOMACS)</i> <br>
+                                        <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
+                                <a style="color: white" target="_blank"
+                                   href="https://ink.library.smu.edu.sg/cgi/viewcontent.cgi?article=5851&context=sis_research">[Book]</a></span>
+
+                                    </div>
+
+                                </div>
 
                             </div>
 
@@ -325,110 +862,10 @@
                     <div class="col-md-1">
                     </div>
                     <div class="col-md-10">
-                        <div id="conferences">
+                        <div id="a_conferences">
+
                             <hr size="30" color="#cfd8dc">
-                            <h2>Selected Conference Publications</h2>
-                            <h2></h2>
-                            <a target="_blank" href="https://scholar.google.com.hk/citations?hl=en&user=2Bh_o20AAAAJ">
-                                Google Scholar</a> |
-                            <a target="_blank" href="https://dblp.org/pid/95/6812.html"> dblp </a> (* = equal
-                            contributions)
-                            <h4 style="color: #2b00aa">Digital Research Institute ENN Group</h4>
-
-                            <!--example-->
-                            <div id="conference-example">
-                                <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                    <h6><strong style="color: red"> [FL-AAAI ] </strong>
-                                        <a target="_blank"
-                                           href="https://federated-learning.org/fl-aaai-2022/Papers/FL-AAAI-22_paper_11.pdf">WT-Shapley:
-                                            Efficient and Effective Incentive Mechanism in Federated Learning for
-                                            Intelligent Safety Inspection</a>
-                                    </h6>
-                                    Chengyi Yang, Jia Liu, Hao Sun, Tongzhi Li and <b>Zengxiang Li</b> <br>
-                                    <i>International Workshop on Trustable, Verifiable and Auditable Federated Learning
-                                        in
-                                        Conjunction with AAAI 2022 </i> <strong style="color: red"> Best Application
-                                    Award </strong> <br>
-                                    <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
-                                <a style="color: white" target="_blank"
-                                   href="https://federated-learning.org/fl-aaai-2022/Papers/FL-AAAI-22_paper_11.pdf">[pdf]</a></span>
-
-                                </div>
-                                <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                    <h6><strong style="color: red"> [FL-AAAI ] </strong>
-                                        <a target="_blank"
-                                           href="https://federated-learning.org/fl-aaai-2022/Papers/FL-AAAI-22_paper_42.pdf">Personalized
-                                            Federated Learning for Multi-task Fault Diagnosis of Rotating Machinery </a>
-                                    </h6>
-                                    Sheng Guo, <b>Zengxiang Li</b> Hui Liu, Shubao Zhao and Cheng Hao Jin <br>
-                                    <i> International Workshop on Trustable, Verifiable and Auditable Federated Learning
-                                        in
-                                        Conjunction with AAAI 2022 </i><br>
-                                    <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
-                                <a style="color: white" target="_blank"
-                                   href="https://federated-learning.org/fl-aaai-2022/Papers/FL-AAAI-22_paper_42.pdf">[pdf]</a></span>
-
-                                </div>
-                                <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                    <h6><strong style="color: red"> [FL-AAAI ] </strong>
-                                        <a target="_blank" href="https://arxiv.org/abs/2203.04305">LSTMSPLIT: Effective
-                                            SPLIT
-                                            Learning based LSTM on Sequential Time-Series Data</a>
-                                    </h6>
-                                    Lianlian Jiang, YuexuanWang, Wenyi Zheng, Chao Jin, <b>Zengxiang Li</b>, Sin G. Teo
-                                    <br>
-                                    <i>International Workshop on Trustable, Verifiable and Auditable Federated Learning
-                                        in
-                                        Conjunction with AAAI 2022 </i><br>
-                                    <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
-                                <a style="color: white" target="_blank"
-                                   href="https://arxiv.org/abs/2203.04305">[arxiv]</a></span>
-
-                                </div>
-                                <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                    <h6><strong style="color: red"> [FL-IJCAI ] </strong>
-                                        <a target="_blank"
-                                           href="https://federated-learning.org/fl-ijcai-2022/Papers/FL-IJCAI-22_paper_16.pdf">Cluster-driven
-                                            Personalized
-                                            Federated Learning for Natural Gas Load Forecasting</a>
-                                    </h6>
-                                    Shubao Zhao, Jia Liu, Guoliang Ma, Jie Yang, Di Liu and <b>Zengxiang Li</b> <br>
-                                    <i>FL-IJCAI 2022 : International Workshop on Trustworthy Federated Learning in
-                                        Conjunction with IJCAI 2022 (FL-IJCAI'22) </i> <strong style="color: red">
-                                    Innovation Award</strong> <br>
-                                    <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
-                                <a style="color: white" target="_blank"
-                                   href="https://federated-learning.org/fl-ijcai-2022/Papers/FL-IJCAI-22_paper_16.pdf">[pdf]</a></span>
-
-                                </div>
-                                <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                    <h6><strong style="color: red"> [IAAI] </strong>
-                                        <a target="_blank">Efficient Training of Large-scale Industrial Fault Diagnostic
-                                            Models through Federated Opportunistic Block Dropout</a>
-                                    </h6>
-                                    Yuanyuan Chen, Zichen Chen, Yansong Zhao, Zelei Liu, Pengcheng Wu, Sheng Guo,
-                                    Chengyi
-                                    Yang, <b>Zengxiang Li</b>and Han Yu <br>
-                                    <i>The 35th Annual Conference on Innovative Applications of Artificial Intelligence
-                                        (IAAI-23) </i> <strong style="color: red"> AI deployment award</strong> <br>
-
-                                </div>
-                                <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                    <h6><strong style="color: red"> [ICPADS ] </strong>
-                                        <a target="_blank">CluFL: Cluster-driven
-                                            Weighted FL Model Aggregation Strategy</a>
-                                    </h6>
-                                    Hanchi Shen, Jun Li, Kang Wei, Pengcheng Xia, Sirui Tian, Ming Ding, <b>Zengxiang
-                                    Li</b>
-                                    <br>
-                                    <i>The 28th IEEE International Conference on Parallel and Distributed Systems
-                                        (ICPADS
-                                        2022) </i> <strong style="color: #23afce"> Accepted</strong> <br>
-
-                                </div>
-
-                            </div>
-                            <h4 style="color: #841dd9">Institute of High Performance Computing A*STAR</h4>
+                            <h4 style="color: #841dd9">Selected Conference Publications</h4>
 
                             <!--example-->
                             <div id="conference-example-high">
@@ -842,339 +1279,7 @@
                     <div class="col-md-1">
                     </div>
                     <div class="col-md-10">
-                        <div id="journals">
-                            <hr size="30" color="#cfd8dc">
-                            <h2>Selected Journal Publications</h2>
-                            <h4 style="color: #2b00aa">Digital Research Institute ENN Group</h4>
 
-                            <!--[TMC'22] FLASH: Heterogeneity-Aware Federated Learning at Scale -->
-
-
-                            <!--                    example-->
-                            <div id="journal-example">
-                                <!--[Pervasive Computing'21] A Case for Camera-as-a-Service-->
-                                <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                    <h6><strong style="color: red"> [TBD] </strong>
-                                        <a target="_blank"
-                                           href="https://federated-learning.org/fl-aaai-2022/Papers/FL-AAAI-22_paper_11.pdf">
-                                            WTDP-Shapley: Efficient and
-                                            Effective Incentive
-                                            Mechanism in Federated Learning for Intelligent Safety Inspection </a>
-                                    </h6>
-                                    Chengyi Yang, Jia Liu, Hao Sun,
-                                    Tongzhi Li and <b>Zengxiang Li </b> <br>
-                                    <i>IEEE Transactions on Big Data, IF 4.271, 2022 </i> <strong
-                                        style="color: #23afce">Accepted </strong><br>
-                                    <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
-                                <a style="color: white" target="_blank"
-                                   href="https://federated-learning.org/fl-aaai-2022/Papers/FL-AAAI-22_paper_11.pdf">[pdf]</a></span>
-
-                                </div>
-                                <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                    <h6><strong style="color: red"> [TBD] </strong>
-                                        <a target="_blank"
-                                           href="https://ieeexplore.ieee.org/abstract/document/9900067/">
-                                            Augmented Multi-Party
-                                            Computation for Secure Federated Learning </a>
-                                    </h6>
-                                    Chi Zhang, Sotthiwat Ekant, Liangli Zhen,<b>Zengxiang Li </b> <br>
-                                    <i>IEEE Transactions on Big Data,IF
-                                        4.271, 2022</i> <strong
-                                        style="color: #23afce">Accepted </strong><br>
-                                    <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
-                                <a style="color: white" target="_blank"
-                                   href="https://ieeexplore.ieee.org/abstract/document/9900067/">[pdf]</a></span>
-
-                                </div>
-                                <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                    <h6><strong style="color: red"> [ARRAY] </strong>
-                                        <a target="_blank"
-                                           href="https://www.sciencedirect.com/science/article/pii/S2590005622000546">
-                                            CE-Fed:
-                                            Communication Efficient Multi-party Computation Enabled Federated
-                                            Learning </a>
-                                    </h6>
-                                    Renuga Kanagavelu,Qingsong Wei, <b>Zengxiang Li </b>,Haibin Zhang,Juniarto
-                                    Samsudin,Yechao Yang,Rick Siow Mong Goh,Shangguang Wang<br>
-                                    <i>ARRAY 2020 Open Access </i> <br>
-                                    <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
-                                <a style="color: white" target="_blank"
-                                   href="https://www.sciencedirect.com/science/article/pii/S2590005622000546">[pdf]</a></span>
-
-                                </div>
-                                <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                    <h6><strong style="color: red"> [TII] </strong>
-                                        <a target="_blank"
-                                           href="https://ieeexplore.ieee.org/abstract/document/9950718/">
-                                            R2Fed: Resilient Reinforcement
-                                            Federated Learning for Industrial Applications </a>
-                                    </h6>
-                                    Weishan Zhang,Fa Yu, Xiao Wang,Xingjie Zeng, Hongwei Zhao, Zenglin Tian,
-                                    Fei-Yue Wang, Hongwei Qi, <b>Zengxiang Li </b> <br>
-                                    <i> IEEE Transactions on Industrial
-                                        Informatics, IF 10.215, 2022 </i><strong
-                                        style="color: #23afce">Accepted </strong> <br>
-                                    <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
-                                <a style="color: white" target="_blank"
-                                   href="https://ieeexplore.ieee.org/abstract/document/9950718/">[pdf]</a></span>
-
-                                </div>
-                            </div>
-
-                            <!--more-->
-                            <!--                            <div id="journal-collapse" class="panel-collapse collapse show">-->
-                            <!--                                <div class="panel-body">-->
-
-                            <!--                                    &lt;!&ndash;[TMC'17] ShuffleDog: Characterizing and Adapting User-Perceived Latency of Android App&ndash;&gt;-->
-
-                            <!--                                </div>-->
-                            <!--                            </div>-->
-
-                            <!--                            &lt;!&ndash;                    click&ndash;&gt;-->
-                            <!--                            <div class="panel-heading">-->
-                            <!--                                <a id="journal-collapse-click" data-toggle="collapse" data-parent="#accordion"-->
-                            <!--                                   href="#journal-collapse" class="" aria-expanded="true">fold</a>-->
-                            <!--                            </div>-->
-
-                            <div>
-                                <h4 style="color: #2b00aa">Institute of High Performance Computing A*STAR</h4>
-                                <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                    <h6><strong style="color: red"> [LDH] </strong>
-                                        <a target="_blank"
-                                           href="">
-                                            Retinal Photograph-Based
-                                            Deep Learning Algorithms for Myopia and a Blockchain Platform to Facilitate
-                                            Artificial Intelligence Medical Research: A Retrospective Multi-Cohort Study
-                                        </a>
-                                    </h6>
-                                    Tien-En Tan, Ayesha Anees, Cheng Chen, Shaohua Li, Xinxing Xu, <b>Zengxiang Li </b>,
-                                    Tien Yin Wong, Yong Liu, Daniel Shu Wei Ting, et, al <br>
-                                    <i> The Lancet Digital Health, Mar, 2021 </i> <strong style="color: #23afce">
-                                    Editor’s
-                                    Pick </strong><br>
-
-
-                                </div>
-                                <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                    <h6><strong style="color: red"> [ACS] </strong>
-                                        <a target="_blank"
-                                           href="https://dl.acm.org/doi/abs/10.1145/3464421">
-                                            A Survey of
-                                            Smart Contract Formal Specification and Verification </a>
-                                    </h6>
-                                    Palina Tolmach, Yi Li, Shang-Wei Lin, Yang Liu, <b>Zengxiang Li </b> <br>
-                                    <i> ACM Computing
-                                        Surveys, Mar, 2021</i><strong
-                                        style="color: #23afce">Accepted </strong> <br>
-                                    <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
-                                <a style="color: white" target="_blank"
-                                   href="https://dl.acm.org/doi/abs/10.1145/3464421">[pdf]</a></span>
-
-                                </div>
-                                <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                    <h6><strong style="color: red"> [TSC] </strong>
-                                        <a target="_blank"
-                                           href="">
-                                            Decentralized
-                                            Federated Learning with Two-Phase Multi-Party Computation </a>
-                                    </h6>
-                                    Kanagevelu, Renuga; Wei, Qingsong; <b>Zengxiang Li </b>; Haibin, Zhang; Samsudin,
-                                    Juniarto; Yang, Yechao; Feng, Yang; Goh, Rick Siow Mong <br>
-                                    <i> Transactions on
-                                        Services Computing </i> <strong
-                                        style="color: #23afce">Under Review </strong><br>
-
-
-                                </div>
-                                <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                    <h6><strong style="color: red"> [Knowledge-Based Systems] </strong>
-                                        <a target="_blank"
-                                           href="https://ieeexplore.ieee.org/abstract/document/9950718/">
-                                            Augmented Multi-Party Computation for Secure Federated Learning
-                                        </a>
-                                    </h6>
-                                    Chi Zhang Sotthiwat Ekanut; Liangli Zhen; Joey Tianyi Zhou; <b>Zengxiang Li </b><br>
-                                    <i> Knowledge-Based Systems </i> <strong
-                                        style="color: #23afce">Under Review </strong><br>
-
-                                </div>
-                                <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                    <h6><strong style="color: red"> [Internet of Things] </strong>
-                                        <a target="_blank"
-                                           href="https://ieeexplore.ieee.org/abstract/document/9170559/">
-                                            Privacy-Preserving Blockchain-Based Federated
-                                            Learning for IoT Devices </a>
-                                    </h6>
-                                    Yang Zhao, Jun Zhao, Linshan Jiang, Rui Tan, Dusit Niyato, <b>Zengxiang Li </b>,
-                                    Lingjuan Lyu, and Yingbo Liu <br>
-                                    <i> IEEE Internet of Things Journal, 2020</i> <br>
-                                    <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
-                                <a style="color: white" target="_blank"
-                                   href="https://ieeexplore.ieee.org/abstract/document/9170559/">[pdf]</a></span>
-
-                                </div>
-
-                                <!--                            6-12-->
-                                <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                    <h6><strong style="color: red"> [TCSS] </strong>
-                                        <a target="_blank"
-                                           href=https://ieeexplore.ieee.org/abstract/document/9259116/">
-                                            Blockchain and IoT for Insurance: A Case Study and
-                                            Cyberinfrastructure Solution on Fine-grained Transportation Insurance
-                                        </a>
-                                    </h6>
-                                    Zhe Xiao, <b>Zengxiang Li </b>, Yechao Yang, Yauheni Pyrloh, Ekanut Sotthiwat and
-                                    Rick Siow Mong Goh <br>
-                                    <i> Transactions on Computational Social System, 2020</i> <br>
-                                    <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
-                                <a style="color: white" target="_blank"
-                                   href="https://ieeexplore.ieee.org/abstract/document/9259116/">[pdf]</a></span>
-
-                                </div>
-
-                                <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                    <h6><strong style="color: red"> [ITS] </strong>
-                                        <a target="_blank"
-                                           href="https://www.tandfonline.com/doi/abs/10.1080/15472450.2020.1852082">
-                                            Reinforcement Learning enabled Genetic Algorithm for Vehicle Fleet
-                                            Scheduling
-                                        </a>
-                                    </h6>
-                                    Eda Koksal Ahmed, <b>Zengxiang Li</b>, Bharadwaj Veeravalli and Shen Ren <br>
-                                    <i> Journal of Intelligent Transportation Systems, 2020</i> <strong
-                                        style="color: #23afce;">Accepted </strong><br>
-                                    <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
-                                <a style="color: white" target="_blank"
-                                   href="https://www.tandfonline.com/doi/abs/10.1080/15472450.2020.1852082">[pdf]</a></span>
-
-                                </div>
-                                <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                    <h6><strong style="color: red"> [Transportation Science] </strong>
-                                        <a target="_blank"
-                                           href="https://pubsonline.informs.org/doi/abs/10.1287/trsc.2019.0915">
-                                            Phase Transition in Taxi Dynamics and Impact of
-                                            Ridesharing </a>
-                                    </h6>
-                                    Bo Yang, Shen Ren, Erika Legara, <b>Zengxiang Li</b>, Edward Ong, Louis Lin and
-                                    Christophe Monterola<br>
-                                    <i> Transportation Science, 2019 </i> <br>
-                                    <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
-                                <a style="color: white" target="_blank"
-                                   href="https://pubsonline.informs.org/doi/abs/10.1287/trsc.2019.0915">[pdf]</a></span>
-
-                                </div>
-
-                                <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                    <h6><strong style="color: red"> [Transport Dynamics] </strong>
-                                        <a target="_blank"
-                                           href="https://www.tandfonline.com/doi/shareview/10.1080/21680566.2018.1449682">
-                                            Equality of Public Transit Connectivity: The
-                                            Influence of MRT Services on Individual Buildings for Singapore
-                                        </a>
-                                    </h6>
-                                    <b>Zengxiang Li</b>, Shen Ren, Nan Hu, Yong Liu, Zheng Qin, Rick Siow Mong Goh,
-                                    Liwen Hou, Bharadwaj Veeravalli <br>
-                                    <i> Transportmetrica B: Transport Dynamics, 2018 </i> <br>
-                                    <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
-                                <a style="color: white" target="_blank"
-                                   href="https://www.tandfonline.com/doi/shareview/10.1080/21680566.2018.1449682">[pdf]</a></span>
-
-                                </div>
-                                <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                    <h6><strong style="color: red"> [TMCS] </strong>
-                                        <a target="_blank"
-                                           href="https://dl.acm.org/doi/abs/10.1145/3265749">
-                                            Efficient
-                                            Parallel Simulation over Large-scale Social Contact Networks</a>
-                                    </h6>
-                                    Yulin Wu, Wentong Cai, <b>Zengxiang Li</b>, Xiangting Hou, Wen Jun Tan <br>
-                                    <i> ACM Trans. on
-                                        Modeling and Computer Simulation, 2018</i> <br>
-                                    <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
-                                <a style="color: white" target="_blank"
-                                   href="https://dl.acm.org/doi/abs/10.1145/3265749">[pdf]</a></span>
-
-                                </div>
-                                <!--                                    2017年前Journal-->
-                                <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                    <h6><strong style="color: red"> [SMPT] </strong>
-                                        <a target="_blank"
-                                           href="https://www.sciencedirect.com/science/article/pii/S1569190X15001471">
-                                            Transparent three-phase Byzantine fault tolerance for parallel and
-                                            distributed simulations </a>
-                                    </h6>
-                                    <b>Zengxiang Li</b>, Wentong Cai, Stephen John Turner, Zheng Qin, Rick Siow Mong
-                                    Goh<br>
-                                    <i> Simulation Modelling Practice and Theory</i> <br>
-                                    <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
-                                <a style="color: white" target="_blank"
-                                   href="https://www.sciencedirect.com/science/article/pii/S1569190X15001471">[Book]</a></span>
-
-                                </div>
-                                <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                    <h6><strong style="color: red"> [TOMACS] </strong>
-                                        <a target="_blank"
-                                           href="https://ink.library.smu.edu.sg/cgi/viewcontent.cgi?article=5851&context=sis_research">
-                                            Adaptive Resource Provisioning Mechanism in VEEs for Improving Performance
-                                            of HLA-Based Simulations
-                                        </a>
-                                    </h6>
-                                    <b>Zengxiang Li</b>, Wentong Cai, Stephen John Turner, Xiaorong Li, Ta Nguyen Binh
-                                    Duong, Rick Siow Mong Goh
-                                    <br>
-                                    <i> ACM Transactions on Modeling and Computer Simulation (TOMACS)</i> <br>
-                                    <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
-                                <a style="color: white" target="_blank"
-                                   href="https://ink.library.smu.edu.sg/cgi/viewcontent.cgi?article=5851&context=sis_research">[Book]</a></span>
-
-                                </div>
-
-
-                                <div id="books">
-                                    <h2>Selected Book Publications</h2>
-                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                        <h6><strong style="color: red"> [Springer-Verlag] </strong>
-                                            <a target="_blank"
-                                               href="https://link.springer.com/chapter/10.1007/978-3-030-67270-6_6">
-                                                Federated Learning for
-                                                Advanced Manufacturing Based on Industrial IoT Data Analytics </a>
-                                        </h6>
-                                        Renuga Kanagavelu, <b>Zengxiang Li</b>, Juniarto Samsudin, Shaista Hussain, Yang
-                                        Yechao, Yang Feng, Goh Siow Mong, Rick, Mervyn Cheah<br>
-                                        <i> Book chapter of
-                                            “The Model Factory as the key enabler for the Future of Manufacturing”. Part
-                                            of
-                                            Book Series “Intelligent Systems Reference Library”, Springer-Verlag,
-                                            2020</i>
-                                        <br>
-                                        <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
-                                <a style="color: white" target="_blank"
-                                   href="https://link.springer.com/chapter/10.1007/978-3-030-67270-6_6">[Book]</a></span>
-
-                                    </div>
-                                    <div class="shadow-lg p-3 mb-2 bg-white rounded">
-                                        <h6><strong style="color: red"> [Elsevier] </strong>
-                                            <a target="_blank"
-                                               href="https://www.sciencedirect.com/science/article/pii/B9780128180143000085">
-                                                An Effective Blockchain-based Decentralized Application for Smart
-                                                Building System Management </a>
-                                        </h6>
-                                        Quanqing Xu, Zhaozheng He, <b>Zengxiang Li</b>, Mingzhong Xiao, Rick Siow Mong
-                                        Goh,
-                                        Yongjun Li <br>
-                                        <i> Book chapter of “Real-Time Data Analytics for
-                                            Large-Scale Sensor Data", Elsevier 2019</i> <br>
-                                        <span class="badge badge-pill badge-secondary" style="font-size: x-small; ">
-                                <a style="color: white" target="_blank"
-                                   href="https://www.sciencedirect.com/science/article/pii/B9780128180143000085">[Book]</a></span>
-
-                                    </div>
-
-
-                                </div>
-                            </div>
-
-                        </div>
 
                     </div>
                 </div>
@@ -1292,45 +1397,15 @@
 
 <!--journal publications unfold click-->
 <script type="text/javascript">
-    window.onload = function () {
-        var shift = true;
-        document.getElementById(id = "conference-collapse-click").addEventListener('click', function () {
-            if (shift) {
-                // oSpan.innerHTML = str.substring(0,40)+'...';
-                document.getElementById(id = "conference-collapse-click").innerHTML = 'unfold';
-            } else {
-                // oSpan.innerHTML = str;
-                document.getElementById(id = "conference-collapse-click").innerHTML = 'fold';
-            }
-            //每次点击都会改变开关的状态
-            shift = !shift;
-        })
 
-        var shift1 = true;
-        document.getElementById(id = "journal-collapse-click").addEventListener('click', function () {
-            if (shift1) {
-                // oSpan.innerHTML = str.substring(0,40)+'...';
-                document.getElementById(id = "journal-collapse-click").innerHTML = 'unfold';
-            } else {
-                // oSpan.innerHTML = str;
-                document.getElementById(id = "journal-collapse-click").innerHTML = 'fold';
-            }
-            //每次点击都会改变开关的状态
-            shift1 = !shift1;
-        })
+    window.onload = function () {
+
+        $('[data-submenu]').submenupicker();
 
     }
 </script>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
+
 </body>
 
 <footer class="footer">
